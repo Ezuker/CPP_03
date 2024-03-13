@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bcarolle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/10 14:52:35 by bcarolle          #+#    #+#             */
-/*   Updated: 2024/03/13 16:26:10 by bcarolle         ###   ########.fr       */
+/*   Created: 2024/03/13 17:27:55 by bcarolle          #+#    #+#             */
+/*   Updated: 2024/03/13 17:43:53 by bcarolle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
-int main( void ) {
-	ClapTrap a("copain");
-	ClapTrap b("copain2");
+# include "ClapTrap.hpp"
 
-	a.attack("copain2");
-	b.takeDamage(a.getAttack());
-	// b.beRepaired(10);
-	return (0);
-}
+class ScavTrap : public ClapTrap
+{
+    public:
+        //Constructor Destructor
+		ScavTrap();
+		ScavTrap(std::string name);
+		ScavTrap(ScavTrap const &copy);
+		~ScavTrap();
+
+        //Member functions
+        void    guardGate();
+};
+#endif

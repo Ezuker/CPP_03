@@ -6,18 +6,22 @@
 /*   By: bcarolle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 14:52:35 by bcarolle          #+#    #+#             */
-/*   Updated: 2024/03/13 16:26:10 by bcarolle         ###   ########.fr       */
+/*   Updated: 2024/03/13 18:47:11 by bcarolle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 int main( void ) {
-	ClapTrap a("copain");
-	ClapTrap b("copain2");
+	ClapTrap a("Clap");
+	ClapTrap b("Clap2");
+	ScavTrap c("Scav");
+	FragTrap d("Frag");
 
-	a.attack("copain2");
-	b.takeDamage(a.getAttack());
-	// b.beRepaired(10);
+	a.attack("haha");
+	c.takeDamage(a.getAttack());
+	d.beRepaired(10);
+	d.highFivesGuys();
+	c.guardGate();
 	return (0);
 }

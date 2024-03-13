@@ -6,7 +6,7 @@
 /*   By: bcarolle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 14:52:38 by bcarolle          #+#    #+#             */
-/*   Updated: 2024/03/13 17:29:24 by bcarolle         ###   ########.fr       */
+/*   Updated: 2024/03/13 18:34:22 by bcarolle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ ClapTrap::ClapTrap() : _name("name") , _hit_point(10), _energy_point(10), _attac
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _hit_point(10), _energy_point(10), _attack_point(0)
 {
-	std::cout << "Constructor called" << std::endl;
+	std::cout << "Constructor called of ClapTrap" << std::endl;
 }
 
 ClapTrap::ClapTrap(ClapTrap const &copy)
@@ -49,6 +49,26 @@ int	ClapTrap::getEnergy() const
 int	ClapTrap::getHealth() const
 {
 	return (this->_hit_point);
+}
+
+void	ClapTrap::setAttackPoint(const int amount)
+{
+	this->_attack_point = amount;
+}
+
+void	ClapTrap::setEnergyPoint(const int amount)
+{
+	this->_energy_point = amount;
+}
+
+void	ClapTrap::setHealthPoint(const int amount)
+{
+	this->_hit_point = amount;
+}
+
+void	ClapTrap::setName(const std::string name)
+{
+	this->_name = name;
 }
 
 std::string	ClapTrap::getName() const

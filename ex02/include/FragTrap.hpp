@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bcarolle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/10 14:52:35 by bcarolle          #+#    #+#             */
-/*   Updated: 2024/03/13 16:26:10 by bcarolle         ###   ########.fr       */
+/*   Created: 2024/03/13 18:39:11 by bcarolle          #+#    #+#             */
+/*   Updated: 2024/03/13 18:43:31 by bcarolle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#ifndef FRAGTRAP_HPP
+# define FRAPTRAP_HPP
 
-int main( void ) {
-	ClapTrap a("copain");
-	ClapTrap b("copain2");
+class FragTrap : public ClapTrap
+{
+    public:
+        //Constructor Destructor
+		FragTrap();
+		FragTrap(std::string name);
+		FragTrap(FragTrap const &copy);
+		~FragTrap();
 
-	a.attack("copain2");
-	b.takeDamage(a.getAttack());
-	// b.beRepaired(10);
-	return (0);
-}
+        //Member functions
+        void    highFivesGuys();
+};
+#endif
