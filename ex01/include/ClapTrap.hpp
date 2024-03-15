@@ -6,7 +6,7 @@
 /*   By: bcarolle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 14:52:40 by bcarolle          #+#    #+#             */
-/*   Updated: 2024/03/13 18:28:47 by bcarolle         ###   ########.fr       */
+/*   Updated: 2024/03/15 13:33:30 by bcarolle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,9 @@ class ClapTrap
 		ClapTrap(ClapTrap const &copy);
 		~ClapTrap();
 
+		//Operator
+		ClapTrap	&operator=(const ClapTrap &rhs);
+
 		//Member functions
 		void	attack(const std::string &target);
 		void	takeDamage(unsigned int amount);
@@ -40,7 +43,7 @@ class ClapTrap
 		void		setAttackPoint(const int amount);
 
 
-	private:
+	protected:
 		std::string	_name;
 		int			_hit_point;
 		int			_energy_point;

@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bcarolle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/10 14:52:35 by bcarolle          #+#    #+#             */
-/*   Updated: 2024/03/14 18:43:21 by bcarolle         ###   ########.fr       */
+/*   Created: 2024/03/13 18:39:11 by bcarolle          #+#    #+#             */
+/*   Updated: 2024/03/15 13:15:48 by bcarolle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#pragma once
 
-int main( void ) {
-	ClapTrap a("copain");
-	ClapTrap b(a);
-	ScavTrap c("haha");
-	ScavTrap d = c;
-	ClapTrap e = b;
+# include "ClapTrap.hpp"
 
-	a.attack("haha");
-	c.takeDamage(a.getAttack());
-	return (0);
-}
+class FragTrap : virtual public ClapTrap
+{
+    public:
+        //Constructor Destructor
+		FragTrap();
+		FragTrap(std::string name);
+		FragTrap(FragTrap const &copy);
+		~FragTrap();
+
+        //Member functions
+        void    highFivesGuys();
+};

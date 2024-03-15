@@ -6,7 +6,7 @@
 /*   By: bcarolle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 14:52:40 by bcarolle          #+#    #+#             */
-/*   Updated: 2024/03/13 18:44:17 by bcarolle         ###   ########.fr       */
+/*   Updated: 2024/03/15 13:31:56 by bcarolle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ class ClapTrap
 		void		setAttackPoint(const int amount);
 
 
-	private:
+	protected:
 		std::string	_name;
 		int			_hit_point;
 		int			_energy_point;

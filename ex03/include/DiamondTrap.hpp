@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bcarolle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/10 14:52:35 by bcarolle          #+#    #+#             */
-/*   Updated: 2024/03/14 18:43:21 by bcarolle         ###   ########.fr       */
+/*   Created: 2024/03/13 18:48:33 by bcarolle          #+#    #+#             */
+/*   Updated: 2024/03/15 13:16:00 by bcarolle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#pragma once
 
-int main( void ) {
-	ClapTrap a("copain");
-	ClapTrap b(a);
-	ScavTrap c("haha");
-	ScavTrap d = c;
-	ClapTrap e = b;
+# include "ScavTrap.hpp"
+# include "FragTrap.hpp"
 
-	a.attack("haha");
-	c.takeDamage(a.getAttack());
-	return (0);
-}
+class DiamondTrap : public FragTrap, public ScavTrap
+{
+    public:
+        //Constructor Destructor
+		DiamondTrap();
+		DiamondTrap(std::string name);
+		DiamondTrap(DiamondTrap const &copy);
+		~DiamondTrap();
+
+        //Member functions
+        void    whoAmI();
+
+    private:
+        std::string _name;
+};

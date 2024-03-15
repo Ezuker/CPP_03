@@ -6,7 +6,7 @@
 /*   By: bcarolle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 17:39:39 by bcarolle          #+#    #+#             */
-/*   Updated: 2024/03/15 13:34:12 by bcarolle         ###   ########.fr       */
+/*   Updated: 2024/03/15 13:20:53 by bcarolle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,18 @@ ScavTrap::ScavTrap() : ClapTrap()
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
     std::cout << "Constructor called of ScavTrap" << std::endl;
-    this->_attack_point = 20;
-    this->_energy_point = 50;
     this->_hit_point = 100;
+    this->_energy_point = 50;
+    this->_attack_point = 20;
 }
 
 ScavTrap::ScavTrap(ScavTrap const &copy) : ClapTrap(copy)
 {
     std::cout << "Copy constructor called of ScavTrap" << std::endl;
-    this->_attack_point = 20;
-    this->_energy_point = 50;
+    this->_name = copy.getName();
     this->_hit_point = 100;
+    this->_energy_point = 50;
+    this->_attack_point = 20;
 }
 
 ScavTrap::~ScavTrap()
