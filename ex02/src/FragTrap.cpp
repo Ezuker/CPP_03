@@ -6,11 +6,11 @@
 /*   By: bcarolle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 18:40:43 by bcarolle          #+#    #+#             */
-/*   Updated: 2024/03/15 13:32:48 by bcarolle         ###   ########.fr       */
+/*   Updated: 2024/03/16 16:08:55 by bcarolle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "FragTrap.hpp"
 
 FragTrap::FragTrap() : ClapTrap()
 {
@@ -28,9 +28,6 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 FragTrap::FragTrap(FragTrap const &copy) : ClapTrap(copy)
 {
     std::cout << "Copy constructor called of FragTrap" << std::endl;
-    this->_hit_point = 100;
-    this->_energy_point = 100;
-    this->_attack_point = 30;
 }
 
 FragTrap::~FragTrap()

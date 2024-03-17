@@ -6,7 +6,7 @@
 /*   By: bcarolle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 17:27:55 by bcarolle          #+#    #+#             */
-/*   Updated: 2024/03/15 13:15:54 by bcarolle         ###   ########.fr       */
+/*   Updated: 2024/03/17 13:54:52 by bcarolle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,5 @@ class ScavTrap : virtual public ClapTrap
 
         //Member functions
         void    guardGate();
+        void    attack(const std::string &target);
 };

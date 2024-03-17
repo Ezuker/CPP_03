@@ -33,7 +33,7 @@ INCLUDES = \
 
 OBJ = $(SRC:%.cpp=$(BUILD_DIR)%.o)
 BUILD_DIR = ./build/
-CC = g++
+CC = c++
 CFLAGS = -Wall -Wextra -Werror -g -std=c++98
 NAME = Serena_my_love
 BOOL_EXEC = 0

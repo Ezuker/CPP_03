@@ -6,7 +6,7 @@
 /*   By: bcarolle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 14:52:40 by bcarolle          #+#    #+#             */
-/*   Updated: 2024/03/15 13:31:56 by bcarolle         ###   ########.fr       */
+/*   Updated: 2024/03/16 16:06:26 by bcarolle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,5 @@ class ClapTrap
 		int			_energy_point;
 		int			_attack_point;
 };
-
-# include "FragTrap.hpp"
-# include "ScavTrap.hpp"
 
 #endif

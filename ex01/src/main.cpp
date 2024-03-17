@@ -6,7 +6,7 @@
 /*   By: bcarolle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 14:52:35 by bcarolle          #+#    #+#             */
-/*   Updated: 2024/03/14 18:43:21 by bcarolle         ###   ########.fr       */
+/*   Updated: 2024/03/16 15:57:47 by bcarolle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,12 @@ int main( void ) {
 	ClapTrap b(a);
 	ScavTrap c("haha");
 	ScavTrap d = c;
-	ClapTrap e = b;
 
 	a.attack("haha");
 	c.takeDamage(a.getAttack());
+	c.attack("copain");
+	a.takeDamage(c.getAttack());
+	a.attack("haha");
+	c.guardGate();
 	return (0);
 }

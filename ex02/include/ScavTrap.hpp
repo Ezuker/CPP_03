@@ -6,12 +6,14 @@
 /*   By: bcarolle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 17:27:55 by bcarolle          #+#    #+#             */
-/*   Updated: 2024/03/13 18:43:34 by bcarolle         ###   ########.fr       */
+/*   Updated: 2024/03/16 16:06:08 by bcarolle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCAVTRAP_HPP
 # define SCAVTRAP_HPP
+
+# include "ClapTrap.hpp"
 
 class ScavTrap : public ClapTrap
 {
@@ -24,5 +26,6 @@ class ScavTrap : public ClapTrap
 
         //Member functions
         void    guardGate();
+        void    attack(const std::string &target);
 };
 #endif
