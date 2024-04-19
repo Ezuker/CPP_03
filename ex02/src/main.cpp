@@ -6,7 +6,7 @@
 /*   By: bcarolle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 14:52:35 by bcarolle          #+#    #+#             */
-/*   Updated: 2024/03/17 14:01:29 by bcarolle         ###   ########.fr       */
+/*   Updated: 2024/04/19 16:05:38 by bcarolle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,12 @@ int main( void ) {
 
 	std::cout << e.getAttack() << " " << e.getEnergy() << " " << e.getHealth() << " " << e.getName() << std::endl;
 	std::cout << f.getAttack() << " " << f.getEnergy() << " " << f.getHealth() << " " << f.getName() << std::endl; 
-	a.attack("haha");
+	a.attack("Clap2");
 	c.takeDamage(a.getAttack());
 	d.beRepaired(10);
 	d.highFivesGuys();
+	d.attack("Clap2");
+	b.takeDamage(d.getAttack());
 	c.guardGate();
 	return (0);
 }

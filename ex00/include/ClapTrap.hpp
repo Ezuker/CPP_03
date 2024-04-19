@@ -6,7 +6,7 @@
 /*   By: bcarolle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 14:52:40 by bcarolle          #+#    #+#             */
-/*   Updated: 2024/03/14 18:37:47 by bcarolle         ###   ########.fr       */
+/*   Updated: 2024/04/19 15:45:08 by bcarolle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ class ClapTrap
 {
 	public:
 		//Constructor Destructor
-		ClapTrap();
 		ClapTrap(std::string name);
 		ClapTrap(ClapTrap const &copy);
 		~ClapTrap();

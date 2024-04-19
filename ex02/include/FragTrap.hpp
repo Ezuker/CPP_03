@@ -6,7 +6,7 @@
 /*   By: bcarolle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 18:39:11 by bcarolle          #+#    #+#             */
-/*   Updated: 2024/03/16 16:06:18 by bcarolle         ###   ########.fr       */
+/*   Updated: 2024/04/19 16:02:09 by bcarolle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ class FragTrap : public ClapTrap
 {
     public:
         //Constructor Destructor
-		FragTrap();
 		FragTrap(std::string name);
 		FragTrap(FragTrap const &copy);
 		~FragTrap();

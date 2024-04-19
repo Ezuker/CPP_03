@@ -6,7 +6,7 @@
 /*   By: bcarolle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 14:52:40 by bcarolle          #+#    #+#             */
-/*   Updated: 2024/03/16 16:06:26 by bcarolle         ###   ########.fr       */
+/*   Updated: 2024/03/15 13:33:30 by bcarolle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,9 @@ class ClapTrap
 		ClapTrap(std::string name);
 		ClapTrap(ClapTrap const &copy);
 		~ClapTrap();
+
+		//Operator
+		ClapTrap	&operator=(const ClapTrap &rhs);
 
 		//Member functions
 		void	attack(const std::string &target);

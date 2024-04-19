@@ -6,7 +6,7 @@
 /*   By: bcarolle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 14:52:35 by bcarolle          #+#    #+#             */
-/*   Updated: 2024/03/16 16:16:30 by bcarolle         ###   ########.fr       */
+/*   Updated: 2024/04/19 16:15:12 by bcarolle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,12 @@ void	display_info(const DiamondTrap a)
 int main()
 {
 	std::cout << "Building" << std::endl;
-	DiamondTrap a;
 	DiamondTrap b("Diamond b");
-	DiamondTrap c(a);
+	DiamondTrap c(b);
 	std::cout << std::endl;
 
 	std::cout << "GamePlay" << std::endl;
-	a.whoAmI();
-	display_info(a);
-	a.attack(b.getName());
-	display_info(b);
 	b.takeDamage(30);
-	std::cout << a.getEnergy() << std::endl;
 	b.whoAmI();
 	b.attack("Chadd-clone");
 	c.whoAmI();

@@ -6,16 +6,11 @@
 /*   By: bcarolle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 14:52:38 by bcarolle          #+#    #+#             */
-/*   Updated: 2024/03/16 15:47:29 by bcarolle         ###   ########.fr       */
+/*   Updated: 2024/04/19 15:50:37 by bcarolle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
-
-ClapTrap::ClapTrap() : _name("name") , _hit_point(10), _energy_point(10), _attack_point(0)
-{
-	std::cout << "Default constructor called" << std::endl;
-}
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _hit_point(10), _energy_point(10), _attack_point(0)
 {
@@ -66,7 +61,10 @@ std::string	ClapTrap::getName() const
 void	ClapTrap::attack(const std::string &target)
 {
 	if (this->_hit_point <= 0 || this->_energy_point == 0)
+	{
+		std::cout << "ClapTrap " << this->_name << " can't attack. ";
 		return;
+	}
 	std::cout << "ClapTrap " << this->_name << " attacks " << target << " ! ";
 	std::cout << "The attack causes " << this->_attack_point << "." << std::endl;
 	this->_energy_point--;
@@ -87,6 +85,11 @@ void	ClapTrap::beRepaired(unsigned int amount)
 {
 	if (this->_hit_point <= 0 || this->_energy_point == 0)
 		return;
+	if (amount > 1000)
+	{
+		std::cout << "Claptrap can't be repaired more than 1000 health." << std::endl;
+		return;
+	}
 	std::cout << "Claptrap repaired " << amount << " health. ";
 	this->_energy_point--;
 	this->_hit_point += amount;

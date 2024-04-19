@@ -6,11 +6,12 @@
 /*   By: bcarolle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 14:52:40 by bcarolle          #+#    #+#             */
-/*   Updated: 2024/03/15 13:16:45 by bcarolle         ###   ########.fr       */
+/*   Updated: 2024/04/19 16:13:41 by bcarolle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
 
 # include <iostream>
 
@@ -22,6 +23,9 @@ class ClapTrap
 		ClapTrap(std::string name);
 		ClapTrap(ClapTrap const &copy);
 		~ClapTrap();
+
+		//Operator
+		ClapTrap	&operator=(const ClapTrap &rhs);
 
 		//Member functions
 		void	attack(const std::string &target);
@@ -45,3 +49,5 @@ class ClapTrap
 		int			_energy_point;
 		int			_attack_point;
 };
+
+#endif
