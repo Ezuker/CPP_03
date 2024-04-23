@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+		"ClapTrap.hpp": "cpp",
+		"FragTrap.hpp": "cpp",
+		"ScavTrap.hpp": "cpp",
+		"DiamondTrap.hpp": "cpp"
+	}
+}
