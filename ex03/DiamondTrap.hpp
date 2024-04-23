@@ -6,7 +6,7 @@
 /*   By: bcarolle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 18:48:33 by bcarolle          #+#    #+#             */
-/*   Updated: 2024/04/19 16:09:37 by bcarolle         ###   ########.fr       */
+/*   Updated: 2024/04/23 14:13:51 by bcarolle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,11 @@ class DiamondTrap : public FragTrap, public ScavTrap
 		DiamondTrap(DiamondTrap const &copy);
 		~DiamondTrap();
 
+		//Operator
+		DiamondTrap	&operator=(const DiamondTrap &rhs);
+
 		//Member functions
+		using	ScavTrap::attack;
 		void	whoAmI();
 
 	private:

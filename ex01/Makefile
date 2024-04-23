@@ -24,12 +24,12 @@ _ICYAN=$'\033[46m
 _IWHITE=$'\033[47m
 
 SRC = \
-	src/main.cpp \
-	src/ClapTrap.cpp \
-	src/ScavTrap.cpp \
+	main.cpp \
+	ClapTrap.cpp \
+	ScavTrap.cpp \
 
 INCLUDES = \
-	-I./include/ \
+	-I. \
 
 OBJ = $(SRC:%.cpp=$(BUILD_DIR)%.o)
 BUILD_DIR = ./build/

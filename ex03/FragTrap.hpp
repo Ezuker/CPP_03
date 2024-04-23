@@ -6,7 +6,7 @@
 /*   By: bcarolle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 18:39:11 by bcarolle          #+#    #+#             */
-/*   Updated: 2024/04/19 16:13:54 by bcarolle         ###   ########.fr       */
+/*   Updated: 2024/04/23 14:03:34 by bcarolle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,9 @@ class FragTrap : virtual public ClapTrap
 		FragTrap(std::string name);
 		FragTrap(FragTrap const &copy);
 		~FragTrap();
+
+		//Operator
+		FragTrap	&operator=(const FragTrap &rhs);
 
 		//Member functions
 		void	highFivesGuys();
