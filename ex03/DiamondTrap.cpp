@@ -12,13 +12,13 @@
 
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), FragTrap(name + "_clap_name"), ScavTrap(name + "_clap_name")
+DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), FragTrap(name), ScavTrap(name)
 {
 	std::cout << "Constructor called of DiamondTrap" << std::endl;
 	this->_name = name;
-	// this->_hit_point = FragTrap::_hit_point; //100
-	// this->_attack_point = FragTrap::_attack_point; //30
-	// this->_energy_point = ScavTrap::_energy_point; //50
+	FragTrap::_hit_point = 100; //100
+	FragTrap::_attack_point = 30; //30
+	ScavTrap::_energy_point = 50; //50
 }
 
 DiamondTrap::DiamondTrap(DiamondTrap const &copy) : ClapTrap(copy), FragTrap(copy), ScavTrap(copy)

@@ -21,7 +21,7 @@ class ClapTrap
 		//Constructor Destructor
 		ClapTrap(std::string name);
 		ClapTrap(ClapTrap const &copy);
-		~ClapTrap();
+		virtual ~ClapTrap();
 
 		//Operator
 		ClapTrap	&operator=(const ClapTrap &rhs);
