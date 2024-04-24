@@ -6,7 +6,7 @@
 /*   By: bcarolle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 14:52:40 by bcarolle          #+#    #+#             */
-/*   Updated: 2024/04/23 13:40:04 by bcarolle         ###   ########.fr       */
+/*   Updated: 2024/04/24 13:50:11 by bcarolle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class ClapTrap
 		//Constructor Destructor
 		ClapTrap(std::string name);
 		ClapTrap(ClapTrap const &copy);
-		virtual ~ClapTrap();
+		~ClapTrap();
 
 		//Operator
 		ClapTrap	&operator=(const ClapTrap &rhs);
